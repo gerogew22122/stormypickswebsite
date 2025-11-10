@@ -1,10 +1,10 @@
 export default function FloatingBubbles() {
-  const bubbles = Array.from({ length: 15 }, (_, i) => ({
+  const bubbles = Array.from({ length: 10 }, (_, i) => ({
     id: i,
-    size: Math.random() * 100 + 50,
+    size: Math.random() * 60 + 40,
     left: Math.random() * 100,
-    delay: Math.random() * 10,
-    duration: Math.random() * 10 + 15,
+    delay: Math.random() * 15,
+    duration: Math.random() * 15 + 20,
   }));
 
   return (
@@ -18,9 +18,9 @@ export default function FloatingBubbles() {
             height: `${bubble.size}px`,
             left: `${bubble.left}%`,
             bottom: '-100px',
-            background: `radial-gradient(circle at 30% 30%, rgba(0, 240, 255, 0.1), rgba(255, 165, 0, 0.05))`,
-            border: '1px solid rgba(255, 255, 255, 0.05)',
-            backdropFilter: 'blur(2px)',
+            background: `radial-gradient(circle at 30% 30%, rgba(0, 200, 255, 0.04), rgba(255, 165, 0, 0.02))`,
+            border: '1px solid rgba(255, 255, 255, 0.02)',
+            backdropFilter: 'blur(1px)',
             animationDelay: `${bubble.delay}s`,
             animationDuration: `${bubble.duration}s`,
           }}

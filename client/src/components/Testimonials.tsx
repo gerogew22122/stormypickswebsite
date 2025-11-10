@@ -93,9 +93,8 @@ export default function Testimonials() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="py-20 px-4 bg-gradient-to-b from-black/70 via-black/75 to-black/80 relative">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/85 to-transparent"></div>
+    <div className="py-20 px-4 bg-black/85 relative">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/8 via-transparent to-transparent"></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-1 mb-3">
