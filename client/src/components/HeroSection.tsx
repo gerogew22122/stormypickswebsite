@@ -27,18 +27,6 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 py-16 sm:py-12 min-h-screen flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-12 items-center">
           <div className="flex flex-col justify-center space-y-8">
-            <div className="lg:hidden flex justify-center mb-4">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl rounded-full"></div>
-                <img 
-                  src={spLogoImg} 
-                  alt="Stormy Picks" 
-                  className="w-32 h-32 relative z-10 drop-shadow-2xl"
-                  data-testid="img-logo-mobile"
-                />
-              </div>
-            </div>
-
             <div className="flex flex-wrap gap-3">
               <Badge className="bg-accent/20 text-accent border-accent/30 px-4 py-1.5 text-sm" data-testid="badge-verified">
                 <Award className="w-4 h-4 mr-2" />
@@ -50,16 +38,26 @@ export default function HeroSection() {
               </Badge>
             </div>
 
-            <div>
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-5 leading-tight" data-testid="text-headline">
+            <div className="flex items-center gap-6 lg:block">
+              <div className="lg:hidden relative flex-shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 blur-xl rounded-full"></div>
+                <img 
+                  src={spLogoImg} 
+                  alt="Stormy Picks" 
+                  className="w-24 h-24 relative z-10 drop-shadow-2xl"
+                  data-testid="img-logo-mobile"
+                />
+              </div>
+
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-tight" data-testid="text-headline">
                 Win More.<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Bet Smarter.</span>
               </h1>
-              
-              <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-xl" data-testid="text-subheadline">
-                Join Australia's fastest-growing sports betting community. Data-driven picks, transparent results, real profits.
-              </p>
             </div>
+
+            <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-xl" data-testid="text-subheadline">
+              Join Australia's fastest-growing sports betting community. Data-driven picks, transparent results, real profits.
+            </p>
 
             <div className="grid grid-cols-2 gap-4 max-w-md">
               <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-md p-4" data-testid="stat-units-profited">
