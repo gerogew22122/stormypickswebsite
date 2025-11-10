@@ -1,7 +1,8 @@
 import { Card } from "@/components/ui/card";
-import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import { useCallback, useEffect, useState } from "react";
 
 const testimonials = [
@@ -50,7 +51,10 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "start" },
+    [Autoplay({ delay: 4000, stopOnInteraction: true })]
+  );
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
 
@@ -76,14 +80,19 @@ export default function Testimonials() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="py-20 px-4 bg-background">
+    <div className="py-20 px-4 bg-gradient-to-b from-muted/20 to-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
+          <div className="flex items-center justify-center gap-1 mb-3">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-6 h-6 fill-accent text-accent" />
+            ))}
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-testimonials-heading">
-            What Our Members Say
+            Trusted by Winning Bettors
           </h2>
           <p className="text-muted-foreground text-lg" data-testid="text-testimonials-description">
-            Real results from real bettors
+            See what our community has to say
           </p>
         </div>
 
@@ -96,18 +105,22 @@ export default function Testimonials() {
                   className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0"
                   data-testid={`testimonial-slide-${index}`}
                 >
-                  <Card className="p-6 h-full hover-elevate">
-                    <Quote className="w-10 h-10 text-primary mb-4" />
-                    <p className="text-foreground mb-6 leading-relaxed" data-testid={`text-testimonial-${index}`}>
+                  <Card className="p-6 h-full hover-elevate border-card-border bg-card/50 backdrop-blur-sm transition-all duration-300">
+                    <div className="flex items-center gap-1 mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                      ))}
+                    </div>
+                    <Quote className="w-8 h-8 text-primary/60 mb-4" />
+                    <p className="text-foreground mb-6 leading-relaxed text-sm" data-testid={`text-testimonial-${index}`}>
                       {testimonial.text}
                     </p>
-                    <div className="mt-auto">
+                    <div className="mt-auto border-t border-border pt-4">
                       <div className="font-bold mb-1" data-testid={`text-testimonial-name-${index}`}>
                         {testimonial.name}
                       </div>
-                      <div className="text-sm text-muted-foreground">
-                        <div data-testid={`text-testimonial-date-${index}`}>{testimonial.date}</div>
-                        <div className="text-xs" data-testid={`text-testimonial-time-${index}`}>
+                      <div className="text-xs text-muted-foreground">
+                        <div data-testid={`text-testimonial-time-${index}`}>
                           {testimonial.timeSince}
                         </div>
                       </div>
@@ -123,8 +136,7 @@ export default function Testimonials() {
               variant="outline"
               size="icon"
               onClick={scrollPrev}
-              disabled={!canScrollPrev}
-              className="rounded-full"
+              className="rounded-full hover-elevate active-elevate-2"
               data-testid="button-testimonial-prev"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -133,8 +145,7 @@ export default function Testimonials() {
               variant="outline"
               size="icon"
               onClick={scrollNext}
-              disabled={!canScrollNext}
-              className="rounded-full"
+              className="rounded-full hover-elevate active-elevate-2"
               data-testid="button-testimonial-next"
             >
               <ChevronRight className="w-5 h-5" />

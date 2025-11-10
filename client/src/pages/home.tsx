@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <HeroSection />
-      <PricingPackages />
       <Testimonials />
+      <PricingPackages />
       <PerformanceMetrics />
     </div>
   );
