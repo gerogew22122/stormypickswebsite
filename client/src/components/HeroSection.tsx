@@ -27,6 +27,18 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 py-16 sm:py-12 min-h-screen flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-12 items-center">
           <div className="flex flex-col justify-center space-y-8">
+            <div className="lg:hidden flex justify-center mb-4">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl rounded-full"></div>
+                <img 
+                  src={spLogoImg} 
+                  alt="Stormy Picks" 
+                  className="w-32 h-32 relative z-10 drop-shadow-2xl"
+                  data-testid="img-logo-mobile"
+                />
+              </div>
+            </div>
+
             <div className="flex flex-wrap gap-3">
               <Badge className="bg-accent/20 text-accent border-accent/30 px-4 py-1.5 text-sm" data-testid="badge-verified">
                 <Award className="w-4 h-4 mr-2" />
