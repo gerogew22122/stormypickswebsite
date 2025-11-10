@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 py-3">
+      <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button 
             onClick={scrollToTop}
@@ -30,24 +30,27 @@ export default function Navbar() {
             <span className="text-white font-bold text-lg hidden sm:block">Stormy Picks</span>
           </button>
 
-          <div className="flex items-center gap-2 md:gap-4">
+          <div className="flex items-center gap-3">
             <Button 
               variant="ghost" 
+              size="sm"
               onClick={() => scrollToSection('reviews')}
-              className="text-white hover:text-primary"
+              className="text-white hover:text-primary hidden sm:inline-flex"
               data-testid="button-nav-reviews"
             >
               Reviews
             </Button>
             <Button 
               variant="ghost" 
+              size="sm"
               onClick={() => scrollToSection('pricing')}
-              className="text-white hover:text-primary"
+              className="text-white hover:text-primary hidden sm:inline-flex"
               data-testid="button-nav-packages"
             >
               Packages
             </Button>
             <Button 
+              size="sm"
               onClick={() => scrollToSection('pricing')}
               className="bg-accent hover:bg-accent text-accent-foreground font-bold"
               data-testid="button-nav-cta"

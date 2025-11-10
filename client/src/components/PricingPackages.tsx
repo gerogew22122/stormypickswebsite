@@ -59,25 +59,25 @@ const packages = [
 
 export default function PricingPackages() {
   return (
-    <div className="py-20 px-4 bg-gradient-to-b from-black/85 via-black/80 to-black/85 relative" id="pricing">
+    <div className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-black/85 via-black/80 to-black/85 relative" id="pricing">
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black/85 to-transparent pointer-events-none"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/6 via-transparent to-transparent"></div>
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/90 to-transparent pointer-events-none"></div>
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="text-pricing-heading">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 text-white px-4" data-testid="text-pricing-heading">
             Choose Your Package
           </h2>
-          <p className="text-white/70 text-lg" data-testid="text-pricing-description">
+          <p className="text-white/70 text-base sm:text-lg px-4" data-testid="text-pricing-description">
             Start winning today for less than $1 a day
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {packages.map((pkg, index) => (
             <Card 
               key={pkg.name}
-              className={`p-8 relative hover-elevate bg-white/5 backdrop-blur-md border-white/10 ${pkg.highlighted ? 'ring-2 ring-accent' : ''}`}
+              className={`p-6 sm:p-8 relative hover-elevate bg-white/5 backdrop-blur-md border-white/10 ${pkg.highlighted ? 'ring-2 ring-accent' : ''}`}
               data-testid={`card-package-${index}`}
             >
               {pkg.badge && (

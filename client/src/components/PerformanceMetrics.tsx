@@ -34,20 +34,20 @@ const metrics = [
 
 export default function PerformanceMetrics() {
   return (
-    <div className="py-20 px-4 pb-32 bg-gradient-to-b from-black/90 via-black/85 to-black/95 relative">
+    <div className="py-12 sm:py-16 md:py-20 px-6 sm:px-8 pb-32 bg-gradient-to-b from-black/90 via-black/85 to-black/95 relative">
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black/90 to-transparent pointer-events-none"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/6 via-transparent to-transparent"></div>
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="text-performance-heading">
+        <div className="text-center mb-10 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-white" data-testid="text-performance-heading">
             Transparent Performance
           </h2>
-          <p className="text-white/70 text-lg" data-testid="text-performance-description">
+          <p className="text-white/70 text-base sm:text-lg" data-testid="text-performance-description">
             Real results, verified picks, complete transparency
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {metrics.map((metric, index) => (
             <Card 
               key={metric.label}

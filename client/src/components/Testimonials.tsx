@@ -93,21 +93,21 @@ export default function Testimonials() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="py-20 px-4 bg-gradient-to-b from-black/85 via-black/80 to-black/85 relative" id="reviews">
+    <div className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-black/85 via-black/80 to-black/85 relative" id="reviews">
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black/90 to-transparent pointer-events-none"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/8 via-transparent to-transparent"></div>
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/85 to-transparent pointer-events-none"></div>
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-1 mb-3">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <div className="flex items-center justify-center gap-1 mb-2 sm:mb-3">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-6 h-6 fill-accent text-accent" />
+              <Star key={i} className="w-5 h-5 sm:w-6 sm:h-6 fill-accent text-accent" />
             ))}
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="text-testimonials-heading">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 text-white px-4" data-testid="text-testimonials-heading">
             Trusted by Winning Bettors
           </h2>
-          <p className="text-white/70 text-lg" data-testid="text-testimonials-description">
+          <p className="text-white/70 text-base sm:text-lg px-4" data-testid="text-testimonials-description">
             See what our community has to say
           </p>
         </div>
@@ -121,33 +121,33 @@ export default function Testimonials() {
                   className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0"
                   data-testid={`testimonial-slide-${index}`}
                 >
-                  <Card className="p-6 h-full hover-elevate bg-white/5 backdrop-blur-md border-white/10 transition-all duration-300">
-                    <div className="flex items-start gap-4 mb-4">
-                      <Avatar className="w-12 h-12 border-2 border-primary/30">
+                  <Card className="p-4 sm:p-6 h-full hover-elevate bg-white/5 backdrop-blur-md border-white/10 transition-all duration-300">
+                    <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                      <Avatar className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-primary/30 flex-shrink-0">
                         {testimonial.avatar && (
                           <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                         )}
-                        <AvatarFallback className="bg-primary/20 text-primary font-bold">
+                        <AvatarFallback className="bg-primary/20 text-primary font-bold text-xs sm:text-sm">
                           {testimonial.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                         </AvatarFallback>
                       </Avatar>
-                      <div className="flex-1">
-                        <div className="font-bold mb-1 text-white" data-testid={`text-testimonial-name-${index}`}>
+                      <div className="flex-1 min-w-0">
+                        <div className="font-bold mb-1 text-white text-sm sm:text-base" data-testid={`text-testimonial-name-${index}`}>
                           {testimonial.name}
                         </div>
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-0.5 sm:gap-1">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-3.5 h-3.5 fill-accent text-accent" />
+                            <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-accent text-accent" />
                           ))}
                         </div>
                       </div>
                     </div>
-                    <Quote className="w-7 h-7 text-primary/60 mb-3" />
-                    <p className="text-white/90 mb-4 leading-relaxed text-sm" data-testid={`text-testimonial-${index}`}>
+                    <Quote className="w-6 h-6 sm:w-7 sm:h-7 text-primary/60 mb-2 sm:mb-3" />
+                    <p className="text-white/90 mb-3 sm:mb-4 leading-relaxed text-xs sm:text-sm" data-testid={`text-testimonial-${index}`}>
                       {testimonial.text}
                     </p>
-                    <div className="mt-auto border-t border-white/10 pt-3">
-                      <div className="text-xs text-white/60">
+                    <div className="mt-auto border-t border-white/10 pt-2 sm:pt-3">
+                      <div className="text-[10px] sm:text-xs text-white/60">
                         <div data-testid={`text-testimonial-time-${index}`}>
                           {testimonial.timeSince}
                         </div>
@@ -159,24 +159,24 @@ export default function Testimonials() {
             </div>
           </div>
 
-          <div className="flex justify-center gap-4 mt-8">
+          <div className="flex justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
             <Button
               variant="outline"
               size="icon"
               onClick={scrollPrev}
-              className="rounded-full hover-elevate active-elevate-2 bg-white/10 border-white/20 text-white hover:bg-white/20"
+              className="rounded-full hover-elevate active-elevate-2 bg-white/10 border-white/20 text-white hover:bg-white/20 h-9 w-9 sm:h-10 sm:w-10"
               data-testid="button-testimonial-prev"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </Button>
             <Button
               variant="outline"
               size="icon"
               onClick={scrollNext}
-              className="rounded-full hover-elevate active-elevate-2 bg-white/10 border-white/20 text-white hover:bg-white/20"
+              className="rounded-full hover-elevate active-elevate-2 bg-white/10 border-white/20 text-white hover:bg-white/20 h-9 w-9 sm:h-10 sm:w-10"
               data-testid="button-testimonial-next"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </Button>
           </div>
         </div>
