@@ -27,7 +27,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 py-16 sm:py-12 min-h-screen flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-12 items-center">
           <div className="flex flex-col justify-center space-y-8">
-            <div className="flex flex-wrap gap-3">
+            <div className="hidden lg:flex flex-wrap gap-3">
               <Badge className="bg-accent/20 text-accent border-accent/30 px-4 py-1.5 text-sm" data-testid="badge-verified">
                 <Award className="w-4 h-4 mr-2" />
                 Verified Performance
@@ -98,6 +98,17 @@ export default function HeroSection() {
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                 <span>Active community</span>
               </div>
+            </div>
+
+            <div className="flex lg:hidden flex-wrap gap-3">
+              <Badge className="bg-accent/20 text-accent border-accent/30 px-4 py-1.5 text-sm" data-testid="badge-verified-mobile">
+                <Award className="w-4 h-4 mr-2" />
+                Verified Performance
+              </Badge>
+              <Badge className="bg-primary/20 text-primary border-primary/30 px-4 py-1.5 text-sm" data-testid="badge-transparent-mobile">
+                <Target className="w-4 h-4 mr-2" />
+                100% Transparent
+              </Badge>
             </div>
           </div>
 
