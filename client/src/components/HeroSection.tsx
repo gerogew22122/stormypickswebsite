@@ -5,7 +5,10 @@ import spLogoImg from "@assets/image_1762738117348.png";
 
 export default function HeroSection() {
   const handleCtaClick = () => {
-    window.location.href = "https://whop.com/stormy-picks?a=stormypicks";
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
