@@ -29,6 +29,50 @@ export default function DiscordGuide() {
             />
           </div>
 
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-6 sm:p-8 mt-6 sm:mt-8 mx-2 sm:mx-0">
+            <div className="prose prose-invert max-w-none">
+              <p className="text-white/80 text-base sm:text-lg mb-6">
+                In order to join a Discord server through Whop, you must first attach an existing Discord account to your Whop account. If you previously added your Discord account to Whop, refer directly to <strong>Joining a Discord Server</strong>.
+              </p>
+
+              <h2 className="text-xl sm:text-2xl font-bold text-white mt-8 mb-4" data-testid="heading-linking-account">
+                Linking Your Existing Discord Account to Whop
+              </h2>
+              
+              <ol className="space-y-3 sm:space-y-4 text-white/80 text-base sm:text-lg list-decimal list-inside">
+                <li>Sign into your account on Whop.</li>
+                <li>
+                  Visit{" "}
+                  <a 
+                    href="https://whop.com/@me/settings/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 underline break-all"
+                    data-testid="link-whop-settings"
+                  >
+                    https://whop.com/@me/settings/
+                  </a>{" "}
+                  to view and edit your account settings.
+                </li>
+                <li>Click on the <strong>Connected Accounts</strong> tab.</li>
+                <li>Under <strong>Add New Account</strong> select <strong>Discord</strong>. You will be redirected to Discord in a new tab within your browser.</li>
+                <li>On the Discord site, log into your Discord account.</li>
+                <li>Once you are logged in, a form titled <strong>Whop Bot</strong> should appear. Scroll down on this form and click <strong>Authorize</strong> at the bottom. You will now be redirected back to Whop.</li>
+              </ol>
+
+              <h2 className="text-xl sm:text-2xl font-bold text-white mt-8 mb-4" data-testid="heading-joining-server">
+                Joining a Discord Server
+              </h2>
+              
+              <ol className="space-y-3 sm:space-y-4 text-white/80 text-base sm:text-lg list-decimal list-inside">
+                <li>Visit the Whop page with the Discord you intend to access.</li>
+                <li>Click on the <strong>Discord app</strong> in the Whop.</li>
+                <li>Select your Discord account and click <strong>Claim Access</strong>.</li>
+                <li>You will be redirected to the Discord site and should now have access to the Discord community.</li>
+              </ol>
+            </div>
+          </div>
+
           <div className="mt-6 sm:mt-8 text-center px-4 pb-8">
             <Link href="/">
               <Button size="lg" data-testid="button-back-home-bottom">
