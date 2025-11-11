@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
+import { HelpCircle } from "lucide-react";
 import spLogoImg from "@assets/image_1762738117348.png";
 
 export default function Navbar() {
@@ -49,6 +51,17 @@ export default function Navbar() {
             >
               Packages
             </Button>
+            <Link href="/discord-guide">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                className="text-white hover:text-primary"
+                data-testid="button-nav-discord"
+              >
+                <HelpCircle className="w-4 h-4 sm:mr-2" />
+                <span className="hidden sm:inline">Discord Guide</span>
+              </Button>
+            </Link>
             <Button 
               size="sm"
               onClick={() => scrollToSection('pricing')}
