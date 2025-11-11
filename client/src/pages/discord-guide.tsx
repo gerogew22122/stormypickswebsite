@@ -5,16 +5,18 @@ import { Link } from "wouter";
 export default function DiscordGuide() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-black/95 to-black/90">
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <Link href="/">
-          <Button variant="ghost" className="mb-8" data-testid="button-back-home">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Button>
-        </Link>
+      <div className="w-full px-2 sm:px-4 py-4 sm:py-8">
+        <div className="mb-4 px-2">
+          <Link href="/">
+            <Button variant="ghost" data-testid="button-back-home">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Home
+            </Button>
+          </Link>
+        </div>
 
-        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-4 sm:p-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 text-center" data-testid="heading-discord-guide">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 text-center px-4" data-testid="heading-discord-guide">
             How to Connect to Discord
           </h1>
 
@@ -27,7 +29,7 @@ export default function DiscordGuide() {
             />
           </div>
 
-          <div className="mt-8 text-center">
+          <div className="mt-6 sm:mt-8 text-center px-4 pb-8">
             <Link href="/">
               <Button size="lg" data-testid="button-back-home-bottom">
                 <ArrowLeft className="w-4 h-4 mr-2" />
