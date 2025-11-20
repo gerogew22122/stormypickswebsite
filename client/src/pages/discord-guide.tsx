@@ -74,12 +74,19 @@ export default function DiscordGuide() {
           </div>
 
           <div className="mt-6 sm:mt-8 text-center px-4 pb-8">
-            <Link href="/">
-              <Button size="lg" data-testid="button-back-home-bottom">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Home
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/bankroll-guide">
+                <Button size="lg" variant="default" data-testid="button-bankroll-guide">
+                  What is a Bankroll?
+                </Button>
+              </Link>
+              <Link href="/">
+                <Button size="lg" variant="outline" data-testid="button-back-home-bottom">
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to Home
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
