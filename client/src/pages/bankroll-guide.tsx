@@ -19,8 +19,8 @@ export default function BankrollGuide() {
           </div>
 
           <div className="space-y-8">
-            <Card className="bg-gradient-to-br from-primary/10 to-black border-primary/20">
-              <CardContent className="p-8">
+            <Card className="bg-black border-primary/20">
+              <CardContent className="p-8 bg-gradient-to-br from-primary/10 to-black rounded-lg">
                 <p className="text-lg text-gray-300 leading-relaxed">
                   A <span className="text-primary font-semibold">bankroll</span> is simply the total amount of money you set aside specifically for betting, and a <span className="text-primary font-semibold">unit</span> is the standard size of each bet relative to that bankroll.
                 </p>
@@ -31,7 +31,7 @@ export default function BankrollGuide() {
             </Card>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-black/40 border-white/10">
+              <Card className="bg-black border-white/10">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3 mb-4">
                     <div className="bg-primary/20 p-2 rounded-lg">
@@ -67,7 +67,7 @@ export default function BankrollGuide() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-black/40 border-white/10">
+              <Card className="bg-black border-white/10">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3 mb-4">
                     <div className="bg-primary/20 p-2 rounded-lg">
@@ -111,7 +111,7 @@ export default function BankrollGuide() {
               </Card>
             </div>
 
-            <Card className="bg-gradient-to-br from-primary/5 to-black border-primary/20">
+            <Card className="bg-black border-primary/20">
               <CardContent className="p-8">
                 <div className="flex items-start gap-3 mb-6">
                   <div className="bg-primary/20 p-2 rounded-lg">
@@ -165,7 +165,7 @@ export default function BankrollGuide() {
               </CardContent>
             </Card>
 
-            <Card className="bg-black/40 border-white/10">
+            <Card className="bg-black border-white/10">
               <CardContent className="p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Example With Real Numbers</h2>
                 
